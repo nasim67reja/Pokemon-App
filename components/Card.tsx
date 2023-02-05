@@ -1,6 +1,8 @@
-import React from "react";
 import { GET_POKEMON } from "@/queries/pokemonQueries";
 import { useQuery } from "@apollo/client";
+import Link from "next/link";
+
+//  reuse func
 import { capitalizeString } from "@/Helper/Reuse";
 import { padWithZeros } from "@/Helper/Reuse";
 import { addPathC } from "@/Helper/Reuse";
@@ -12,7 +14,10 @@ const Card: React.FC<any> = ({ pokemon }) => {
   //   console.log(data);
 
   return (
-    <div className="custom-clip-path p-5 bg-[#FFFFFF] rounded   h-fit cursor-pointer group hover:bg-[#257BC4] transition-all duration-300">
+    <Link
+      href={`/${pokemon.name}`}
+      className="custom-clip-path p-5 bg-[#FFFFFF] rounded   h-fit cursor-pointer group hover:bg-[#257BC4] transition-all duration-300"
+    >
       <div className="bg-[#F2F2F2] rounded flex justify-center items-center h-[215px] relative p-8">
         <span className="absolute top-4 left-4   tracking-wider">
           #{data && padWithZeros(data.pokemon.id)}
@@ -21,7 +26,7 @@ const Card: React.FC<any> = ({ pokemon }) => {
           src={data && addPathC(data.pokemon.sprites.front_default)}
           //   className="h-full w-full"
           className="group-hover:scale-110 transition-all duration-300"
-          alt=""
+          alt="pokemon"
         />
       </div>
       <h3 className="font-medium px-3 mt-4 mb-2 group-hover:text-white transition-all duration-300">
@@ -50,7 +55,7 @@ const Card: React.FC<any> = ({ pokemon }) => {
             </div>
           ))}
       </div>
-    </div>
+    </Link>
   );
 };
 

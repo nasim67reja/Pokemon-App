@@ -41,4 +41,44 @@ const GET_POKEMON = gql`
   }
 `;
 
-export { GET_POKEMONS, GET_POKEMON };
+const GET_POKEMON_ON_SINGLE_PAGE = gql`
+  query pokemon($name: String!) {
+    pokemon(name: $name) {
+      id
+      name
+      weight
+      height
+      sprites {
+        front_default
+      }
+      moves {
+        move {
+          name
+        }
+      }
+      types {
+        type {
+          name
+        }
+      }
+
+      abilities {
+        ability {
+          name
+        }
+      }
+      species {
+        url
+      }
+
+      stats {
+        base_stat
+        stat {
+          name
+        }
+      }
+    }
+  }
+`;
+
+export { GET_POKEMONS, GET_POKEMON, GET_POKEMON_ON_SINGLE_PAGE };

@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
   font-size: 1.6rem;
   line-height: 1.8;
-  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
 }
 
 .my-container {

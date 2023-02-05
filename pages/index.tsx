@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useQuery } from "@apollo/client";
 
 // components
@@ -9,9 +8,6 @@ import VerticalSlider from "@/components/Slider";
 function HomePage() {
   return (
     <>
-      <Head>
-        <title>Pokemon App</title>
-      </Head>
       <Hero />
       <SectionMain />
     </>
