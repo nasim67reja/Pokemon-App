@@ -2,7 +2,6 @@ import { capitalizeString, padWithZeros } from "@/Helper/Reuse";
 import Skeleton from "react-loading-skeleton";
 
 const Left: React.FC<any> = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <h3 className="leading-[5.5rem] text-[#257BC4] text-[4.8rem] flex gap-4 font-medium">

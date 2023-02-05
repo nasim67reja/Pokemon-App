@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 // Component
 import Left from "@/components/Left";
+import Right from "@/components/Right";
 
 const Pokemon = () => {
   const router = useRouter();
@@ -43,7 +44,7 @@ const Pokemon = () => {
               <Skeleton height={200} width={200} className="mt-20" />
             )}
           </div>
-          <div className="right">right</div>
+          <Right data={data} />
         </div>
       </div>
 

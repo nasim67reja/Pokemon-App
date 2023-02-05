@@ -6,6 +6,38 @@ import Link from "next/link";
 import { capitalizeString } from "@/Helper/Reuse";
 import { padWithZeros } from "@/Helper/Reuse";
 import { addPathC } from "@/Helper/Reuse";
+import Skeleton from "react-loading-skeleton";
+
+export const Types: React.FC<any> = ({ data }) => {
+  return (
+    <>
+      {data ? (
+        data.pokemon.types.map((el: any, i: number) => (
+          <div
+            className={`text-[1.4rem] rounded-[4px] pt-1 px-[2rem] text-white ${
+              el.type.name === "poison"
+                ? "bg-[#B97FC9] "
+                : el.type.name === "fire"
+                ? "bg-[#FC7C23]"
+                : el.type.name === "grass"
+                ? "bg-[#9BCC50]"
+                : el.type.name === "water"
+                ? "bg-[#4592C4]"
+                : el.type.name === "bug"
+                ? "bg-[#729F3F]"
+                : "bg-gradient-to-b from-fly to-from-fly"
+            }`}
+            key={i}
+          >
+            {capitalizeString(el.type.name)}
+          </div>
+        ))
+      ) : (
+        <Skeleton />
+      )}
+    </>
+  );
+};
 
 const Card: React.FC<any> = ({ pokemon }) => {
   const { loading, error, data } = useQuery(GET_POKEMON, {
@@ -33,27 +65,7 @@ const Card: React.FC<any> = ({ pokemon }) => {
         {capitalizeString(pokemon.name)}
       </h3>
       <div className="flex gap-2 px-3">
-        {data &&
-          data.pokemon.types.map((el: any, i: number) => (
-            <div
-              className={`text-[1.4rem] rounded-[4px] pt-1 px-[2rem] text-white ${
-                el.type.name === "poison"
-                  ? "bg-[#B97FC9] "
-                  : el.type.name === "fire"
-                  ? "bg-[#FC7C23]"
-                  : el.type.name === "grass"
-                  ? "bg-[#9BCC50]"
-                  : el.type.name === "water"
-                  ? "bg-[#4592C4]"
-                  : el.type.name === "bug"
-                  ? "bg-[#729F3F]"
-                  : "bg-gradient-to-b from-fly to-from-fly"
-              }`}
-              key={i}
-            >
-              {capitalizeString(el.type.name)}
-            </div>
-          ))}
+        <Types data={data} />
       </div>
     </Link>
   );
