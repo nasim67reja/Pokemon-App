@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,7 +11,7 @@
 }
 
 html {
-  font-size: 52.5%;
+  font-size: 61.5%;
 }
 
 body {
@@ -17,11 +19,12 @@ body {
   overflow-x: hidden;
   font-size: 1.6rem;
   line-height: 1.8;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .my-container {
-  max-width: 185.3rem;
-  padding: 0 3rem;
+  max-width: 162.3rem;
+  padding: 0 4rem;
   margin: 0 auto;
 }
 
@@ -36,4 +39,20 @@ body {
     background-repeat: no-repeat;
     background-position: top;
   }
+}
+
+/*  */
+
+.slider {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

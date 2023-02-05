@@ -12,9 +12,9 @@ const Card: React.FC<any> = ({ pokemon }) => {
   //   console.log(data);
 
   return (
-    <div className="custom-clip-path p-5 bg-[#FFFFFF] rounded  h-[307px] cursor-pointer group hover:bg-[#257BC4] transition-all duration-300">
+    <div className="custom-clip-path p-5 bg-[#FFFFFF] rounded   h-fit cursor-pointer group hover:bg-[#257BC4] transition-all duration-300">
       <div className="bg-[#F2F2F2] rounded flex justify-center items-center h-[215px] relative p-8">
-        <span className="absolute top-4 left-4 font-semibold text-[1.8rem] tracking-wider">
+        <span className="absolute top-4 left-4   tracking-wider">
           #{data && padWithZeros(data.pokemon.id)}
         </span>
         <img
@@ -24,14 +24,14 @@ const Card: React.FC<any> = ({ pokemon }) => {
           alt=""
         />
       </div>
-      <h3 className="text-[2rem] font-medium mt-4 mb-2 group-hover:text-white transition-all duration-300">
+      <h3 className="font-medium px-3 mt-4 mb-2 group-hover:text-white transition-all duration-300">
         {capitalizeString(pokemon.name)}
       </h3>
-      <div className="flex gap-2">
+      <div className="flex gap-2 px-3">
         {data &&
           data.pokemon.types.map((el: any, i: number) => (
             <div
-              className={`text-[1.4rem] rounded-[4px] py-1 px-8 text-white ${
+              className={`text-[1.4rem] rounded-[4px] pt-1 px-[2rem] text-white ${
                 el.type.name === "poison"
                   ? "bg-[#B97FC9] "
                   : el.type.name === "fire"

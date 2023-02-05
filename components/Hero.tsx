@@ -16,7 +16,7 @@ const Hero = () => {
         style={{ backgroundImage: `url(/assets/Background.png)` }}
       >
         <div
-          className="my-element h-full w-full bg-cover bg-top"
+          className="my-element min-h-screen w-full bg-cover bg-top"
           style={{ backgroundImage: `url(/assets/Texture.png)` }}
         >
           <div className="my-container flex flex-col gap-40 ">
@@ -26,7 +26,7 @@ const Hero = () => {
             >
               <img src="/assets/logo.png" alt="pokemon-logo" />
             </div>
-            <div className="grid grid-cols-5 gap-x-32 gap-y-16  ">
+            <div className="grid grid-cols-5 gap-x-36 gap-y-16  ">
               {!loading &&
                 !error &&
                 data.pokemons.results.map((el: any, i: any) => (
