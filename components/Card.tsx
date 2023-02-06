@@ -14,7 +14,7 @@ export const Types: React.FC<any> = ({ data }) => {
       {data ? (
         data.pokemon.types.map((el: any, i: number) => (
           <div
-            className={`text-[1.4rem] rounded-[4px] pt-1 px-[2rem] text-white ${
+            className={`text-[14px] rounded-[4px] pt-1 px-[20px] text-white ${
               el.type.name === "poison"
                 ? "bg-[#B97FC9] "
                 : el.type.name === "fire"
