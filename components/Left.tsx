@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 
 const Left: React.FC<any> = ({ data }) => {
   return (
-    <div>
+    <div className="basis-[20%]">
       <h3 className="leading-[5.5rem] text-[#257BC4] text-[4.8rem] flex gap-4 font-medium">
         {data ? (
           <>
@@ -20,11 +20,11 @@ const Left: React.FC<any> = ({ data }) => {
         born. The seed slowly grows larger.
       </div>
 
-      <div className=" custom-clip-path relative p-[3.5px]  bg-gradient-to-r from-[#F366B9] to-[#FC7C23]">
-        <div className="custom-clip-path bg-white p-16 ">
-          <div className="flex justify-between">
+      <div className=" custom-clip-path relative p-[4px]  bg-gradient-to-r from-[#F366B9] to-[#FC7C23] w-[365px] h-[253px]">
+        <div className="custom-clip-path bg-white p-16 pr-40 h-full ">
+          <div className="flex justify-between ">
             <div>
-              <h4 className="font-medium text-[2rem] leading-[2.3rem] mb-2">
+              <h4 className="font-medium text-[16px] lg:text-[18px] xl:text-[20px] leading-[2.3rem] mb-2">
                 Height
               </h4>
               {data ? (
@@ -36,7 +36,7 @@ const Left: React.FC<any> = ({ data }) => {
               )}
             </div>
             <div>
-              <h4 className="font-medium text-[2rem] leading-[2.3rem] mb-2">
+              <h4 className="font-medium text-[16px] lg:text-[18px] xl:text-[20px]  leading-[2.3rem] mb-2">
                 Category
               </h4>
               <p>Seed</p>
@@ -44,7 +44,7 @@ const Left: React.FC<any> = ({ data }) => {
           </div>
           <div className="flex justify-between mt-16">
             <div>
-              <h4 className="font-medium text-[2rem] leading-[2.3rem] mb-2">
+              <h4 className="font-medium text-[16px] lg:text-[18px] xl:text-[20px] leading-[2.3rem] mb-2">
                 Weight
               </h4>
               {data ? (
@@ -54,7 +54,7 @@ const Left: React.FC<any> = ({ data }) => {
               )}
             </div>
             <div>
-              <h4 className="font-medium text-[2rem] leading-[2.3rem] mb-2">
+              <h4 className="font-medium text-[16px] lg:text-[18px] xl:text-[20px] leading-[2.3rem] mb-2">
                 Abilities
               </h4>
               <div>

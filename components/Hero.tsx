@@ -12,11 +12,11 @@ const Hero = () => {
   return (
     <div>
       <div
-        className="my-element min-h-screen  bg-cover bg-top"
+        className="min-h-screen  bg-cover bg-top"
         style={{ backgroundImage: `url(/assets/Background.png)` }}
       >
         <div
-          className="my-element min-h-screen w-full bg-cover bg-top"
+          className="min-h-screen w-full bg-cover bg-top"
           style={{ backgroundImage: `url(/assets/Texture.png)` }}
         >
           <div className="my-container flex flex-col gap-40 ">

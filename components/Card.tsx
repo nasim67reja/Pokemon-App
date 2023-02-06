@@ -48,7 +48,7 @@ const Card: React.FC<any> = ({ pokemon }) => {
   return (
     <Link
       href={`/${pokemon.name}`}
-      className="custom-clip-path p-5 bg-[#FFFFFF] rounded   h-fit cursor-pointer group hover:bg-[#257BC4] transition-all duration-300"
+      className="custom-clip-path p-5 bg-[#FFFFFF] rounded  w-[235px] h-[307px] md:h-fit cursor-pointer group hover:bg-[#257BC4] transition-all duration-300"
     >
       <div className="bg-[#F2F2F2] rounded flex justify-center items-center h-[215px] relative p-8">
         <span className="absolute top-4 left-4   tracking-wider">

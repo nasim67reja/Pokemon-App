@@ -4,10 +4,10 @@ import VerticalSlider from "./Slider";
 const SectionMain = () => {
   return (
     <section className="flex ">
-      <div className="basis-[7.26%]">
+      <div className="basis-[7.26%] hidden xl:block">
         <VerticalSlider />
       </div>
-      <div className="basis-[85.26%] px-16 ">
+      <div className="basis-[85.26%] flex-grow px-16 ">
         <h1
           className="text-[4.8rem] text-center font-bold text-[#257BC4] w-[57.6rem] mx-auto leading-[5.5rem] bg-center mt-44 mb-36"
           style={{ backgroundImage: `url(/assets/Brush.png)` }}
@@ -42,7 +42,7 @@ const SectionMain = () => {
                     urna sit semper sed duis feugiat mi.
                   </div>
                   <img
-                    className="translate-y-[-8px]"
+                    className="translate-y-[-8px] [16rem] md:h-[20rem] "
                     src="/assets/Image04.png"
                     alt="pikachu&ash"
                   />
@@ -59,15 +59,15 @@ const SectionMain = () => {
                   elementum ut fermentum in cursus.
                 </div>
               </div>
-              <div className="flex-grow items-end  flex flex-col gap-6">
+              <div className="flex-grow   flex flex-col gap-6 justify-around items-center">
                 <img
-                  className="translate-y-[-8px] w-[20rem]"
+                  className="translate-y-[-8px] h-[16rem] md:h-[20rem]  "
                   src="/assets/Image03.png"
                   alt="Pikachu&Ash"
                 />
                 <img
                   src="/assets/Image02.png"
-                  className=" w-[20rem]"
+                  className="h-[16rem] md:h-[20rem] "
                   alt="Pikachu&Ash"
                 />
               </div>
@@ -113,10 +113,14 @@ const SectionMain = () => {
               pulvinar sed viverra .
             </div>
 
-            <div className="flex gap-8">
-              <img src="/assets/Image05.png" alt="pikachu&ash" />
+            <div className="flex gap-8 ">
+              <img
+                src="/assets/Image05.png"
+                alt="pikachu&ash"
+                className="h-[16rem] md:h-[20rem] "
+              />
 
-              <div className="text-justify leading-[1.8rem]">
+              <div className="text-justify leading-[1.8rem] ">
                 Lorem ipsum dolor sit amet consectetur. Turpis integer massa
                 consectetur sed enim quis viverra. Vestibulum eu nibh dolor
                 semper. Nisl feugiat quis nec odio pulvinar feugiat velit. Nulla
@@ -130,8 +134,11 @@ const SectionMain = () => {
               </div>
             </div>
             <div className="flex gap-8">
-              <img src="/assets/Image01.png" alt="pikachu" />
-
+              <img
+                src="/assets/Image01.png"
+                alt="pikachu"
+                className="h-[16rem] md:h-[20rem] "
+              />
               <div className="text-justify leading-[1.8rem]">
                 Lorem ipsum dolor sit amet consectetur. Tincidunt at cras tortor
                 non volutpat quisque facilisis. Ultricies consequat sed vitae
@@ -166,7 +173,7 @@ const SectionMain = () => {
           </div>
         </div>
       </div>
-      <div className="basis-[7.26%]">
+      <div className="basis-[7.26%] hidden xl:block">
         <VerticalSlider />
       </div>
     </section>

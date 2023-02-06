@@ -33,6 +33,8 @@ body {
   clip-path: polygon(100% 0, 100% 85%, 76% 100%, 0 100%, 0 0);
 }
 
+/* Media query */
+
 @media (max-width: 1467px) {
   .my-element {
     background-size: contain;
@@ -41,18 +43,51 @@ body {
   }
 }
 
-/*  */
+@media (max-width: 113.8em) {
+  html {
+    font-size: 55%;
+  }
 
-.slider {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+  /* .my-element {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  } */
 }
 
-.slide {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+@media (max-width: 100em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 92em) {
+  html {
+    font-size: 45%;
+  }
+  body {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 88em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 70em) {
+  html {
+    font-size: 35%;
+  }
+  body {
+    font-size: 2.2rem;
+  }
+}
+
+.cus-w {
+  max-width: 48rem !important;
 }
