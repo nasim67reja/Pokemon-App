@@ -37,7 +37,7 @@ const Hero = () => {
               className="flex justify-center mt-20
           "
             >
-              <img src="/assets/logo.png" alt="pokemon-logo" />
+              <img src="assets/Logo.png" alt="pokemon logo" />
             </div>
 
             {/* Mobile */}

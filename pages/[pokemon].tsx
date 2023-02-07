@@ -52,7 +52,6 @@ const Pokemon = () => {
 
           <div className="grid gap-[10rem] lg:gap-[6rem] xl:gap-[10rem] lg:grid-cols-[28%_32%_20%] justify-items-center ">
             {error && <div>Something went wrong</div>}
-            {/* {data && <Left data={data} />} */}
 
             {data ? (
               <Left data={data} />
