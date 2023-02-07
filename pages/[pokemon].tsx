@@ -38,12 +38,10 @@ const Pokemon = () => {
     variables: { name: pokemon },
   });
 
-  console.log(data);
-
   return (
     <>
-      <section className="flex lg:h-screen ">
-        <div className="basis-[7.26%] h-screen hidden 2xl:block">
+      <section className="flex lg:min-h-screen  pb-[5rem]">
+        <div className="basis-[7.26%] min-h-screen hidden 2xl:block">
           <img className="h-full" src="/assets/Left.png" alt="svg-image" />
         </div>
 
@@ -53,14 +51,27 @@ const Pokemon = () => {
           </div>
 
           <div className="grid gap-[10rem] lg:gap-[6rem] xl:gap-[10rem] lg:grid-cols-[28%_32%_20%] justify-items-center ">
-            <Left data={data} />
+            {error && <div>Something went wrong</div>}
+            {/* {data && <Left data={data} />} */}
+
+            {data ? (
+              <Left data={data} />
+            ) : (
+              <div>
+                <Skeleton height={20} width={100} />
+                <Skeleton height={10} width={250} className="mt-[25px]" />
+                <Skeleton height={10} width={250} />
+                <Skeleton height={10} width={250} className="mb-[25px]" />
+                <Skeleton height={220} width={250} />
+              </div>
+            )}
             <PokemonImage data={data} />
             <Right data={data} />
           </div>
           <div className="flex items-center justify-center mt-[10rem]">
             <Link
               href="/"
-              className="border-[4px] border-[#2B73B9] bg-[#FFCB05] flex gap-4 text-white px-[32px] py-[10px] rounded-[5px] w-fit text-[2rem]"
+              className="border-[4px] border-PRIMARYBL bg-PRIMARYYL flex gap-4 text-white px-[32px] py-[10px] rounded-[5px] w-fit text-[2rem]"
             >
               <img src="/assets/homeIcon.svg" alt="" />
               <span> Back to Homepage</span>

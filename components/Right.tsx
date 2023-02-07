@@ -30,13 +30,13 @@ const Right: React.FC<any> = ({ data }) => {
         <div className="flex gap-8 text-[1.6rem]">
           <div
             className="rounded-[4px] text-[14px] px-[20px] text-white
-           bg-[#FC7C23]"
+           bg-SECONDARYFR"
           >
             Fire
           </div>
           <div
             className="rounded-[4px] text-[14px] px-[20px] text-white
-           bg-[#F366B9]"
+           bg-SECONDARYPS"
           >
             Psychic
           </div>
@@ -48,12 +48,13 @@ const Right: React.FC<any> = ({ data }) => {
           </div>
           <div
             className="rounded-[4px] text-[14px] px-[20px] text-white
-           bg-[#3DC7EF]"
+           bg-SECONDARYIC"
           >
             Ice
           </div>
         </div>
       </div>
+
       <div>
         <h4 className="font-medium text-[18px] lg:text-[20px] mb-6 mt-32 lg:mt-8">
           Stats
@@ -68,9 +69,9 @@ const Right: React.FC<any> = ({ data }) => {
                 <div className="text-[13px] lg:text-[14px] font-medium">
                   {el.stat.name.toUpperCase()}
                 </div>
-                <div className="bg-[#D9D9D9] lg:h-[4px] h-3 w-full relative">
+                <div className="bg-ACCENTGR lg:h-[4px] h-3 w-full relative">
                   <div
-                    className={`h-full  bg-[#30A7D7] rounded-t rounded-b`}
+                    className={`h-full  bg-SECONDARYWA rounded-t rounded-b`}
                     style={{ width: `${el.base_stat}%` }}
                   ></div>
                 </div>
